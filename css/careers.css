@@ -1,0 +1,40 @@
+.card {
+    background-color: #111;
+}
+.search {
+    border-top: #fff;
+}
+.search-container-form {
+    background-image: url("../image/header-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+}
+.search-form>div {
+    margin: 0;
+}
+
+.container-fluid .row {
+    margin: 0;
+}
+
+.job-offers .card .card-header {
+    background-color: #ff1414;
+}
+
+.job-offers .card .card-body {
+    background-color: #fff;
+    color: black;
+}
+
+.container.position-sticky {
+    top: 100px;
+}
+
+.job-offers .card .carb-body ul li{
+    color: darkgray;
+}
+.btn:hover {
+    background-color: #ff1414;
+}

@@ -1,0 +1,98 @@
+@font-face {
+	font-family: 'Gotham';
+	src: url('fonts/Gotham-Bold.otf') format('opentype'),
+		url('fonts/GothamBold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamBookItalic';
+	src: url('fonts/GothamBook.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	/* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+	/* Scroll thumb color */
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	/* Track color */
+}
+
+::-moz-scrollbar {
+	width: 10px;
+	/* Adjust the width as needed */
+}
+
+::-moz-scrollbar-thumb {
+	background: #888;
+	/* Scroll thumb color */
+	border-radius: 5px;
+}
+
+::-moz-scrollbar-track {
+	background: #f1f1f1;
+	/* Track color */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	z-index: 0;
+	word-wrap: break-word;
+}
+/* Reset margin and specify base font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotham', 'Times New Roman', Times, serif;
+    font-size: 75%; /* Adjust the font size if needed */
+    overflow-x: hidden;
+    color: #fff;
+}
+
+.overview-cards .card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.overview-cards .card:hover {
+    transform: scale(1.05);
+    animation: circling-background 5s linear infinite;
+}
+
+@keyframes circling-background {
+	100% {
+        background: radial-gradient(circle at top right, transparent, transparent, #ff1414);
+    }
+    0% {
+        background: radial-gradient(circle at top left, transparent, transparent, #ff1414);
+    }
+    100% {
+        background: radial-gradient(circle at top left, transparent, transparent, #ff1414);
+    }
+}
+
+.index-text-content h1,
+.index-text-content h3 {
+	font-family: 'Times New Roman', Times, serif;
+	
+}
+
+@media (min-width: 768px) {
+	.index-text-content h1,
+	.index-text-content h3 {
+		white-space: nowrap;
+	}
+}
