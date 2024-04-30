@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <?php
-    function getPageTitle() {
+    function pageTitle()
+    {
         // Get the current filename
         $currentPage = basename($_SERVER['PHP_SELF']);
 
-        if ($currentPage == 'index.php'){
+        if ($currentPage == 'index.php') {
             $pageTitle = 'Home';
             return $pageTitle;
         }
-    
+
         // Remove the ".php" extension
         $pageTitle = ucfirst(str_replace('.php', '', $currentPage));
-    
+
         return $pageTitle;
     }
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-CMV | <?= getPageTitle()?></title>
+    <title>E-CMV | <?= pageTitle() ?></title>
     <link rel="icon" type="image/x-icon" href="image/logo-white.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.css" rel="stylesheet">
@@ -41,5 +43,13 @@
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/serv.css">
     <link rel="stylesheet" href="css/careers.css">
+    <script>
+        // document.addEventListener('contextmenu', function(e) {
+        //     e.preventDefault();
+        // });
+        // JavaScript code to toggle between light and dark themes
+    </script>
+    <link href="dist/hamburgers.css" rel="stylesheet">
 </head>
-<body>
+
+<body data-theme="light">

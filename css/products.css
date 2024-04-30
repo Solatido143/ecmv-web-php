@@ -2,11 +2,7 @@
 
 .pagination button.active {
    background-color: red;
-   color: black;
-}
-
-body {
-   background: #111;
+   color: white;
 }
 
 input[type="radio"] {
@@ -58,8 +54,6 @@ input[type="radio"]:checked+label[for^="tab-"] {
    text-align: center;
    padding: 1rem;
    box-shadow: 0 .3rem .6rem rgba(255, 255, 255, 10);
-   outline: .1rem solid #ff1414;
-   outline-offset: -1rem;
    cursor: pointer;
    display: flex;
    flex-direction: column;
@@ -116,21 +110,26 @@ input[type="radio"]:checked+label[for^="tab-"] {
    padding: 1rem;
    text-align: center;
    background: #111;
-   position: relative;
    margin: 0.5rem;
-   width: 7rem;
-   max-height: 90vh;
+   max-width: 90%;
+   width: 40rem;
+   max-height: 80vh;
    overflow-y: hidden;
    border: 2px solid #ff1414;
    border-radius: 5px;
 }
 
+.products-preview .preview.active {
+   display: inline-block;
+   overflow-y: scroll;
+}
+
 .products-preview .preview img {
-   max-width: 80%;
+   max-width: 50%;
    height: auto;
-   display: block;
+   display: none;
    margin: auto;
-   max-height: 25rem;
+   max-height: 17rem;
 }
 
 .products-preview .preview .fa-times {
@@ -138,12 +137,17 @@ input[type="radio"]:checked+label[for^="tab-"] {
    top: 0.50rem;
    right: 0.50rem;
    cursor: pointer;
-   color: #444;
+   color: #c0c0c0;
    font-size: 2rem;
+   background-color: rgb(27, 27, 27);
+   border-radius: 50%;
+   padding: 8px 12px;
 }
 
-.products-preview .preview.active {
-   display: inline-block;
+.products-preview .preview .fa-times:hover {
+   background-color: rgb(15, 15, 15);
+   border-radius: 50%;
+   padding: 8px 12px;
 }
 
 .products-preview .preview .fa-times:hover {
@@ -209,19 +213,6 @@ input[type="radio"]:checked+label[for^="tab-"] {
 .products-preview .preview .buttons a.buy:hover {
    background: #444;
    color: #fff;
-}
-
-.container1 .products-container .product img,
-.products-preview .preview img {
-   max-width: 100%;
-   height: auto;
-   display: block;
-   margin: auto;
-}
-
-.products-preview .preview {
-   max-width: 90%;
-   width: 40rem;
 }
 
 .pagination {

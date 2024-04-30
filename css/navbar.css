@@ -3,14 +3,12 @@ header {
 	width: 100%;
 	box-shadow: rgba(50, 50, 93, 0.8) 0px 50px 100px -20px,
 		rgba(0, 0, 0, 0.8) 0px 30px 60px -30px;
-	color: #ffffff;
 	position: sticky;
 	top: 0;
 	z-index: 99;
 }
 
 .logo {
-
 	font-weight: bold;
 	font-size: 1.25rem;
 }

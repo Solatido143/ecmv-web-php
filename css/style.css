@@ -45,6 +45,13 @@
 	/* Track color */
 }
 
+:root {
+	--overflow-y: scroll;
+	--red: #ff1414;
+	--black: #000;
+	--white: #fff;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -52,47 +59,101 @@
 	z-index: 0;
 	word-wrap: break-word;
 }
+
 /* Reset margin and specify base font */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Gotham', 'Times New Roman', Times, serif;
-    font-size: 75%; /* Adjust the font size if needed */
-    overflow-x: hidden;
-    color: #fff;
+	margin: 0;
+	padding: 0;
+	font-family: 'Gotham', 'Times New Roman', Times, serif;
+	font-size: 75%;
+	/* Adjust the font size if needed */
+	overflow-x: hidden;
+	overflow-y: var(--overflow-y);
+	color: #fff;
+	background: #111;
 }
 
 .overview-cards .card {
-    transition: all 0.3s ease;
-    position: relative;
+	transition: all 0.3s ease;
+	position: relative;
 }
 
 .overview-cards .card:hover {
-    transform: scale(1.05);
-    animation: circling-background 5s linear infinite;
+	transform: scale(1.05);
+	animation: circling-background 5s linear infinite;
 }
 
 @keyframes circling-background {
 	100% {
-        background: radial-gradient(circle at top right, transparent, transparent, #ff1414);
-    }
-    0% {
-        background: radial-gradient(circle at top left, transparent, transparent, #ff1414);
-    }
-    100% {
-        background: radial-gradient(circle at top left, transparent, transparent, #ff1414);
-    }
+		background: radial-gradient(circle at top right, transparent, transparent, #ff1414);
+	}
+
+	0% {
+		background: radial-gradient(circle at top left, transparent, transparent, #ff1414);
+	}
+
+	100% {
+		background: radial-gradient(circle at top left, transparent, transparent, #ff1414);
+	}
 }
 
 .index-text-content h1,
 .index-text-content h3 {
 	font-family: 'Times New Roman', Times, serif;
-	
+
 }
 
 @media (min-width: 768px) {
+
 	.index-text-content h1,
 	.index-text-content h3 {
 		white-space: nowrap;
+	}
+}
+
+.stroke-text {
+	color: white;
+	font-size: 1rem;
+}
+
+.authorize-body span.title,
+.authorize-header span.title {
+	border-bottom: 3px solid var(--red);
+}
+
+.authorize-body ul li.rounded.px-1 {
+	background-color: var(--red);
+}
+
+.authorize-body .why-choose-ecmv li i {
+	color: var(--red);
+}
+
+.authorize-content-container {
+	gap: 1rem;
+}
+
+.lenovo-logo {
+	border: 1px solid red;
+}
+
+@media (min-width: 576px) {
+	.lenovo-logo {
+		width: 15%;
+		max-width: 15%;
+		min-width: 10%;
+	}
+}
+
+.authorized-bottomlist {
+	border-radius: 0px 0px 167px 0px;
+	-webkit-border-radius: 0px 0px 167px 0px;
+	-moz-border-radius: 0px 0px 167px 0px;
+}
+
+@media (min-width: 992px) {
+	.authorized-bottomlist {
+		background-color: red;
+		padding: 10px 0px;
 	}
 }

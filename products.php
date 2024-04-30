@@ -82,7 +82,7 @@ include_once('includes/navbar.php');
     </div>
 </div>
 
-<div class="pagination">
+<div class="pagination my-4">
     <button id="prevPageBtn" onclick="prevPage()">Previous</button>
     <span id="pageNumbers"></span>
     <button id="nextPageBtn" onclick="nextPage()">Next</button>

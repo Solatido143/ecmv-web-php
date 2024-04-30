@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
           if (previewContainer) {
             previewContainer.style.display = "flex";
+            document.documentElement.style.setProperty('--overflow-y', 'hidden');
             let name = product.getAttribute("data-name");
             previewBox.forEach((preview) => {
               let target = preview.getAttribute("data-target");
@@ -104,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       close.querySelector(".fa-times").onclick = () => {
         close.classList.remove("active");
         previewContainer.style.display = "none";
+        document.documentElement.style.setProperty('--overflow-y', 'scroll');
       };
     });
   }
@@ -115,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
           preview.classList.remove("active");
         });
         previewContainer.style.display = "none";
+        document.documentElement.style.setProperty('--overflow-y', 'scroll');
       }
     });
   }

@@ -54,6 +54,45 @@ include_once('includes/navbar.php');
             <div><img src="image/image-partners-1/zenshin.png" alt="zenshin" height="95px" width="95px"></div>
         </div>
     </div>
+</div>
+<div class="authorize-container" style="background: #000">
+    <div class="authorize-header">
+        <div class="container py-4">
+            <div class="authorize-content-container text-center d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                <img src="image/lenovo-logo.png" alt="lenovo_logo" class="lenovo-logo" width="50%" height="auto">
+                <span class="h2 title m-0">Authorized Service Center</span>
+            </div>
+        </div>
+    </div>
+    <div class="authorize-body position-relative py-5 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <span class="h4 title">Why choose E-CMV?</span>
+                        <ul class="col-lg-10 list-unstyled my-3 why-choose-ecmv">
+                            <li><i class="fa-solid fa-check fs-5"></i>Authorized Expertise: Direct access to genuine parts and latest technical knowledge.</li>
+                            <li><i class="fa-solid fa-check fs-5"></i>Skilled Technicians: Regular training, certifications for precise and reliable service.</li>
+                            <li><i class="fa-solid fa-check fs-5"></i>Comprehensive Services: Troubleshooting, repairs, enhancements - tailored to you.</li>
+                            <li><i class="fa-solid fa-check fs-5"></i>Quality Assurance: Strict quality control ensures product integrity and functionality.</li>
+                            <li><i class="fa-solid fa-check fs-5"></i>Customer Satisfaction: Transparent communication, timely updates, exceeding expectations.</li>
+                        </ul>
+                        <div class="col-lg-10 text-nowrap authorized-bottomlist px-3 pe-5">
+                            <div class="d-lg-flex justify-content-between align-items-center gap-lg-1">
+                                <div>&#8226;&nbsp;Rapairs</div>
+                                <div>&#8226;&nbsp;Maintenance</div>
+                                <div>&#8226;&nbsp;Upgrades</div>
+                                <div>&#8226;&nbsp;Warranty Services</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="image/service-center.png" alt="authorize-service-center" class="d-none d-md-block position-absolute w-50 h-100 bottom-0 end-0">
+    </div>
+</div>
+<div class="container-clientele">
     <div class="container-fluid p-0 py-5 container-partners">
         <div class="text-center">
             <h1>Clientele</h1><br>

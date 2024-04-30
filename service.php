@@ -166,14 +166,14 @@ include_once('includes/navbar.php');
             </div>
             <div class="card-body d-sm-none p-0">
                 <img src="image/ph-map.png" alt="ph-Map" class="img"></img>
-                <div class="accordion" id="accordionExample">
+                <div class="accordion accordion-flush" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acordionLuzon" aria-expanded="true" aria-controls="acordionLuzon">
                                 <b>Luzon</b>
                             </button>
                         </h2>
-                        <div id="acordionLuzon" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div id="acordionLuzon" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <ul class="list-unstyled m-0">
                                     <li>Pangasinan</li>

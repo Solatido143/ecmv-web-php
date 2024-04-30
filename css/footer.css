@@ -5,12 +5,11 @@ footer {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Gotham', 'Times New Roman', Times, serif;
-  color: #d9d9d9;
+  color: white;
   font-size: 14px; /* Adjusting font size for all text */
 }
 footer a {
   text-decoration: none;
-  color: white;
 }
 .content1 {
   position: relative;
@@ -29,7 +28,7 @@ footer a {
 footer {
   bottom: 0px;
   width: 100%;
-  background: #111;
+  background: #000;
 }
 
 .main-content {
