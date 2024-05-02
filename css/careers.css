@@ -3,6 +3,12 @@
 } */
 .search {
     border-top: #fff;
+    position: sticky;
+    top: 82px;
+    z-index: 9999;
+}
+.search .search-container-form .col-auto  {
+    margin: 0;
 }
 .search-container-form {
     background-image: url("../image/header-background.png");
@@ -11,6 +17,13 @@
     height: 200px;
     width: 100%;
 }
+
+@media (min-width: 576px) {
+    .search-container-form {
+        height: 100px;
+    }
+}
+
 .search-form>div {
     margin: 0;
 }
@@ -29,7 +42,7 @@
 }
 
 .container.position-sticky {
-    top: 100px;
+    top: 200px;
 }
 
 .job-offers .card .carb-body ul li{

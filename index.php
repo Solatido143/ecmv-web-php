@@ -2,12 +2,6 @@
 include_once('includes/header.php');
 include_once('includes/navbar.php');
 ?>
-
-<div class="spinnerborder d-none position-fixed top-0 d-flex justify-content-center align-items-center vh-100 vw-100 bg-body-tertiary bg-opacity-25" style="z-index: 99;">
-    <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-    </div>
-</div>
 <div class="particles-view" id="particlesView">
     <div id="particles-js">
         <div class="top-index-content">
@@ -64,7 +58,7 @@ include_once('includes/navbar.php');
             </div>
         </div>
     </div>
-    <div class="authorize-body position-relative py-5 d-flex align-items-center">
+    <div class="authorize-body position-relative pb-5 d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">

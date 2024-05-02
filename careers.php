@@ -2,8 +2,7 @@
 include_once('includes/header.php');
 include_once('includes/navbar.php');
 ?>
-
-<div class="join-team">
+<div class="join-team py-4s">
     <div class="container py-3">
         <div class="card border rounded-3">
             <div class="card-body text-center">
@@ -14,49 +13,77 @@ include_once('includes/navbar.php');
     </div>
 </div>
 
-<div class="search mb-5">
+<div class="search">
     <div class="container-fluid p-0">
         <div class="search-container-form position-relative">
-            <form class="row gy-2 gx-3 align-items-center justify-content-center h-100">
-                <div class="col-auto">
-                    <label class="visually-hidden" for="autoSizingInput">Name</label>
-                    <input type="text" class="form-control" id="autoSizingInput" placeholder="Jane Doe">
-                </div>
-                <div class="col-auto">
-                    <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+            <div class="container h-100 d-flex align-items-center">
+                <form id="search_job_form" class="row gy-2 gx-3 align-items-end" action="#">
+                    <div class="col-auto">
+                        <label class="form-label" for="autoSizingInput">WHAT</label>
+                        <input type="text" class="form-control" id="autoSizingInput" placeholder="Programmer">
                     </div>
-                </div>
-                <div class="col-auto">
-                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                    <select class="form-select" id="autoSizingSelect">
-                        <option selected>Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-dark border"><i class="fa fa-magnifying-glass"></i>&nbsp;Find</button>
-                </div>
-            </form>
+                    <div class="col-auto">
+                        <label class="form-label" for="autoSizingInputGroup">WHERE</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Bulacan">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                        <select class="form-select" id="autoSizingSelect">
+                            <option selected>Choose...</option>
+                            <option value="1">Full Time</option>
+                            <option value="2">Part Time</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-dark border"><i class="fa fa-magnifying-glass"></i>&nbsp;Find</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="job-offers">
+<div class="job-offers py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="container">
+                <div class="container overflow-y-auto" style="height:50rem">
                     <div class="card mb-3">
                         <div class="card-header">
                             <span>Web developer - Backend</span>
                         </div>
                         <div class="card-body rounded-bottom">
                             <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <span>Web developer - Backend</span>
+                        </div>
+                        <div class="card-body rounded-bottom">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <span>Web developer - Backend</span>
+                        </div>
+                        <div class="card-body rounded-bottom">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <span>Web developer - Backend</span>
+                        </div>
+                        <div class="card-body rounded-bottom">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
                         </div>
                     </div>
                     <div class="card mb-3">
@@ -65,7 +92,7 @@ include_once('includes/navbar.php');
                         </div>
                         <div class="card-body rounded-bottom">
                             <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
                         </div>
                     </div>
                     <div class="card mb-3">
@@ -74,7 +101,16 @@ include_once('includes/navbar.php');
                         </div>
                         <div class="card-body rounded-bottom">
                             <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            Web developer - Backend
+                        </div>
+                        <div class="card-body rounded-bottom">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
                         </div>
                     </div>
                 </div>
@@ -86,7 +122,7 @@ include_once('includes/navbar.php');
                             <span class="h5 m-0 fw-bold">Web developer - Backend</span>
                             <button class="btn text-light border rounded-3 px-3">Apply</button>
                         </div>
-                        <div class="card-body rounded-bottom">
+                        <div class="card-body rounded-bottom overflow-x-auto" style="height: 25rem;">
                             <h5>JOB DESCRIPTION</h5>
                             <ul>
                                 <li>Design & develop full stack web applications.</li>
@@ -118,6 +154,15 @@ include_once('includes/navbar.php');
                     </div>
                 </div>
             </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 </div>

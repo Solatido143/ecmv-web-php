@@ -47,9 +47,7 @@
         // document.addEventListener('contextmenu', function(e) {
         //     e.preventDefault();
         // });
-        // JavaScript code to toggle between light and dark themes
     </script>
-    <link href="dist/hamburgers.css" rel="stylesheet">
 </head>
 
 <body data-theme="light">

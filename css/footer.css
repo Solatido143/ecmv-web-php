@@ -107,7 +107,7 @@ footer {
 }
 
 .left .content .social a span:hover {
-  background: #f12020;
+  background: #f11414;
 }
 
 .center .content .fas {
@@ -146,8 +146,8 @@ footer {
   color: #ffffff;
 }
 
-.right form .msg {
-  margin-top: 10px;
+.right form .msg, .right form .email {
+  margin-bottom: 10px;
 }
 
 .right form input,
@@ -168,7 +168,7 @@ footer {
 }
 
 .right form .btn {
-  padding: 6px;
+  padding: 0;
 }
 
 .right form .btn button {
