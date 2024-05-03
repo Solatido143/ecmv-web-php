@@ -1,4 +1,5 @@
 <?php
+include_once('connect/dbcon.php');
 include_once('includes/header.php');
 include_once('includes/navbar.php');
 ?>
@@ -89,12 +90,56 @@ include_once('includes/navbar.php');
 </div>
 
 <div class="products-preview">
+    <?php
+    $supplies_sql = "SELECT * FROM supplies";
+    $supplies_result = $conn->query($supplies_sql);
+    $supplies_data = [];
+    if ($supplies_result->num_rows > 0) {
+        while ($supply_row = $supplies_result->fetch_assoc()) {
+            $supplies_data[] = [
+                'item_name' => $supply_row["item_name"],
+                'description' => $supply_row["description"]
+            ];
+        }
+    } else {
+        $supplies_data[] = [
+            'item_name' => 'No supplies found',
+            'description' => ''
+        ];
+    }
+    ?>
     <div class="preview" data-target="p-1">
         <i class="fas fa-times"></i>
         <img src="image/laptop-2.png" alt="">
-        <h3>Laptop </h3>
-        <div class="scrollable-content">
-            <p>Refers to a portable computer manufactured by a specific company. It typically includes components such as a CPU, RAM, storage, and display, designed for personal or professional use on the go.</p>
+        <h3>Laptop</h3>
+        <div class="accordion rounded" id="accordionExample" style="border: 1px solid #ff1414">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Lenovo
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body rounded-bottom">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach ($supplies_data as $supply) : ?>
+                                <tr>
+                                    <th scope="row"><?= $supply['item_name'] ?></th>
+                                    <td><?= $supply['description'] ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="preview" data-target="p-2">
@@ -191,3 +236,4 @@ include_once('includes/navbar.php');
 </div>
 <?php
 include_once('includes/footer.php');
+?>

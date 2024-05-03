@@ -2,8 +2,25 @@
 include_once('includes/header.php');
 include_once('includes/navbar.php');
 ?>
-<div class="join-team py-4s">
-    <div class="container py-3">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="join-team py-3">
+    <div class="container">
         <div class="card border rounded-3">
             <div class="card-body text-center">
                 <h1>Join our team!</h1>
@@ -15,8 +32,8 @@ include_once('includes/navbar.php');
 
 <div class="search">
     <div class="container-fluid p-0">
-        <div class="search-container-form position-relative">
-            <div class="container h-100 d-flex align-items-center">
+        <div class="search-container-form h-100">
+            <div class="container h-100 d-flex align-items-center position-relative">
                 <form id="search_job_form" class="row gy-2 gx-3 align-items-end" action="#">
                     <div class="col-auto">
                         <label class="form-label" for="autoSizingInput">WHAT</label>
@@ -48,7 +65,7 @@ include_once('includes/navbar.php');
 <div class="job-offers py-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="container overflow-y-auto" style="height:50rem">
                     <div class="card mb-3">
                         <div class="card-header">
@@ -115,12 +132,15 @@ include_once('includes/navbar.php');
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 d-none d-lg-block">
                 <div class="container position-sticky">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <span class="h5 m-0 fw-bold">Web developer - Backend</span>
-                            <button class="btn text-light border rounded-3 px-3">Apply</button>
+                            <button type="button" class="btn text-light border rounded-3 px-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Apply
+                            </button>
+
                         </div>
                         <div class="card-body rounded-bottom overflow-x-auto" style="height: 25rem;">
                             <h5>JOB DESCRIPTION</h5>

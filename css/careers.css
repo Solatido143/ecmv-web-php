@@ -1,53 +1,67 @@
-/* .card {
-    background-color: #111;
-} */
 .search {
     border-top: #fff;
-    position: sticky;
-    top: 82px;
-    z-index: 9999;
 }
-.search .search-container-form .col-auto  {
-    margin: 0;
+@media (min-width: 992px) {
+    .search {
+        position: sticky;
+        top: 82px;
+        z-index: 10;
+    }
 }
-.search-container-form {
+.search button {
+    background-color: #111;
+}
+.search button:hover {
+    background-color: #ff1414;
+    color: #111;
+}
+.search .container-fluid {
     background-image: url("../image/header-background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 200px;
     width: 100%;
 }
 
 @media (min-width: 576px) {
-    .search-container-form {
+    .search .container-fluid {
+        height: 140px;
+    }
+}
+@media (min-width: 992px) {
+    .search .container-fluid {
         height: 100px;
     }
 }
-
 .search-form>div {
     margin: 0;
 }
-
 .container-fluid .row {
     margin: 0;
 }
-
 .job-offers .card .card-header {
     background-color: #ff1414;
 }
-
 .job-offers .card .card-body {
     background-color: #fff;
     color: black;
 }
-
 .container.position-sticky {
     top: 200px;
 }
-
 .job-offers .card .carb-body ul li{
     color: darkgray;
 }
 .btn:hover {
     background-color: #ff1414;
+}
+
+.job-offers .col-md-8 button {
+    background-color: #111;
+}
+
+.job-offers .col-md-8 button:hover {
+    background-color: #ff1414;
+    color: #111;
 }
