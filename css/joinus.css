@@ -1,0 +1,143 @@
+/* Add shape before h2 */
+.info-join-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.icon-join {
+  border-radius: 110px 134px 200px 0px;
+  -webkit-border-radius: 110px 134px 200px 0px;
+  -moz-border-radius: 110px 134px 200px 0px;
+  border: 2px solid #fff;
+  background: #ff1414;
+  width: 50px;
+  padding: 10px;
+}
+
+.container-title-wrapper-join {
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  width: 58%;
+  margin: 0 auto;
+}
+
+.container-title {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.container-join {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.row-join {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.col-join {
+  flex: 1 0 100%;
+  margin: 0 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+
+@media (min-width: 762px) {
+  .col-join {
+    flex: 1 0 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-join {
+    flex: 1 0 33.333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-join {
+    flex: 1 0 33.333%;
+  }
+}
+
+
+.info-join-1 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.info-join-1 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: white;
+}
+
+/* text animation */
+.container-svg {
+  display: flex;
+  justify-content: center;
+}
+
+svg {
+  font-family: 'Russo One', sans-serif;
+  width: 50%;
+  height: 50%;
+}
+
+svg text {
+  text-transform: uppercase;
+  animation: stroke 5s 9 alternate;
+  stroke-width: 5;
+  stroke: #00000000;
+  fill: white;
+  font-size: 120px;
+  /* Default font size for larger screens */
+}
+
+@media only screen and (max-width: 600px) {
+  svg {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(102, 37, 47, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+
+  70% {
+    fill: rgba(224, 17, 52, 0);
+    stroke: rgb(255, 255, 255);
+  }
+
+  80% {
+    fill: rgba(224, 17, 52, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-width: 3;
+  }
+
+  100% {
+    fill: rgb(255, 255, 255);
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}

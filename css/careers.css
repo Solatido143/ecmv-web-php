@@ -1,6 +1,7 @@
 .search {
     border-top: #fff;
 }
+
 @media (min-width: 992px) {
     .search {
         position: sticky;
@@ -8,13 +9,7 @@
         z-index: 10;
     }
 }
-.search button {
-    background-color: #111;
-}
-.search button:hover {
-    background-color: #ff1414;
-    color: #111;
-}
+
 .search .container-fluid {
     background-image: url("../image/header-background.png");
     background-repeat: no-repeat;
@@ -29,39 +24,102 @@
         height: 140px;
     }
 }
+
 @media (min-width: 992px) {
     .search .container-fluid {
         height: 100px;
     }
 }
+
 .search-form>div {
     margin: 0;
 }
+
 .container-fluid .row {
     margin: 0;
 }
+
 .job-offers .card .card-header {
     background-color: #ff1414;
 }
+
 .job-offers .card .card-body {
     background-color: #fff;
     color: black;
 }
+
 .container.position-sticky {
     top: 200px;
 }
-.job-offers .card .carb-body ul li{
+
+.job-offers .card .carb-body ul li {
     color: darkgray;
 }
+
 .btn:hover {
     background-color: #ff1414;
 }
 
 .job-offers .col-md-8 button {
-    background-color: #111;
+    background-color: #ff1414;
+    border: 1px solid #ff1414;
 }
 
 .job-offers .col-md-8 button:hover {
+    background-color: #8b0000;
+}
+
+.job-offers .col-md-8 button:active {
+    background-color: #000;
+}
+
+.search button.btn {
     background-color: #ff1414;
-    color: #111;
+    border: 1px solid #ff1414;
+}
+
+.search button.btn:hover {
+    background-color: #8b0000;
+}
+
+.search button.btn:active {
+    background-color: #000;
+}
+
+.job-offers .card .card-header {
+    background-image: url("../image/header-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.modal-apply .modal .modal-header {
+    background-image: url("../image/header-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.modal-apply .modal-body,
+.modal-apply .modal-footer {
+    background-color: #202020;
+}
+
+.modal-body .form-control {
+    background-color: #2020208e;
+    color: white;
+    font-size: small;
+}
+
+.modal-apply .modal .modal-footer button.btn{
+    background-color: #ff1414;
+}
+.modal-apply .modal .modal-footer button.btn:hover{
+    background-color: #8b0000;
+    border-color: #ff1414;
+}
+.modal-apply .modal .modal-footer button.btn:active{
+    background-color: #000;
+    border-color: #fff;
 }

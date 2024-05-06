@@ -6,15 +6,12 @@ include_once('includes/navbar.php');
     <div class="container">
         <div class="container-overlay">
             <div class="text-center">
-                <div class="">
-                    <div style="text-align: center;">
-                        <h1>Company Overview</h1>
-                    </div>
-                    <p class="">Established in 2022 to cater the needs of discerning technologically-empowered
-                        world, ECMV I.T. Corp is a new company that promises to answer your needs in
-                        I.T. solutions and services by employing the best technically skilled field engineers.
-                        ECMV I.T Corp. is the sister company of CMV Industrial Trading founded in 2015.</p>
-                </div>
+                <h1>Company Overview</h1>
+                <p class="">Established in 2022 to cater the needs of discerning technologically-empowered
+                    world, ECMV I.T. Corp is a new company that promises to answer your needs in
+                    I.T. solutions and services by employing the best technically skilled field engineers.
+                    ECMV I.T Corp. is the sister company of CMV Industrial Trading founded in 2015.</p>
+
             </div>
         </div>
         <div class="overview-cards">

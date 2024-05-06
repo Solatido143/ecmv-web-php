@@ -6,11 +6,14 @@ footer {
   box-sizing: border-box;
   font-family: 'Gotham', 'Times New Roman', Times, serif;
   color: white;
-  font-size: 14px; /* Adjusting font size for all text */
+  font-size: 14px;
+  /* Adjusting font size for all text */
 }
+
 footer a {
   text-decoration: none;
 }
+
 .content1 {
   position: relative;
   margin: 130px auto;
@@ -20,7 +23,8 @@ footer a {
 
 .content1 .text,
 .content1 .p {
-  font-size: 14px; /* Keeping large font size for specific elements */
+  font-size: 14px;
+  /* Keeping large font size for specific elements */
   font-weight: 600;
   color: #202020;
 }
@@ -131,7 +135,8 @@ footer {
 }
 
 .center .content .text {
-  font-size: 14px; /* Adjusting font size for specific elements */
+  font-size: 14px;
+  /* Adjusting font size for specific elements */
   font-weight: 500;
   padding-left: 10px;
 }
@@ -141,12 +146,14 @@ footer {
 }
 
 .right form .text {
-  font-size: 14px; /* Adjusting font size for specific elements */
+  font-size: 14px;
+  /* Adjusting font size for specific elements */
   margin-bottom: 2px;
   color: #ffffff;
 }
 
-.right form .msg, .right form .email {
+.right form .msg,
+.right form .email {
   margin-bottom: 10px;
 }
 
@@ -176,20 +183,27 @@ footer {
   border: none;
   outline: none;
   border-radius: 5px;
-  background: #f12020;
-  font-size: 14px; /* Adjusting font size for specific elements */
+  background: #ff1414;
+  font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .right form .btn button:hover {
+  background: #8b0000;
+  color: #999999;
+}
+
+.right form .btn button:active {
   background: #000;
+  border: 1px solid #000;
 }
 
 .bottom .footer-bottom {
   padding: 5px;
-  font-size: 14px; /* Adjusting font size for specific elements */
+  font-size: 14px;
+  /* Adjusting font size for specific elements */
   background: #151515;
 }
 

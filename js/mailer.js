@@ -1,4 +1,4 @@
-document.getElementById('contact_inquiry_form').addEventListener('submit', function (event) {
+document.querySelector('form').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const spinner = document.querySelector('.spinnerborder');

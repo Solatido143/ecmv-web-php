@@ -20,8 +20,3 @@
         </div>
     </div>
 </header>
-<div class="spinnerborder d-none position-fixed top-0 d-flex justify-content-center align-items-center vh-100 vw-100 bg-body-tertiary bg-opacity-25" style="z-index: 99;">
-    <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-    </div>
-</div>

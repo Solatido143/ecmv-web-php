@@ -43,6 +43,8 @@
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/serv.css">
     <link rel="stylesheet" href="css/careers.css">
+    <link rel="stylesheet" href="css/joinus.css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
     <script>
         // document.addEventListener('contextmenu', function(e) {
         //     e.preventDefault();

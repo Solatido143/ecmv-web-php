@@ -63,10 +63,7 @@
     resize: none;
 }
 
-.button .btn:hover {
-    background: #111;
-    color: #fff;
-}
+
 
 .bottom {
     position: fixed;
@@ -92,10 +89,39 @@
 }
 
 .container2 .contactus {
-    /* Existing styles */
     transition: border-color 0.3s ease;
 }
 
 .container2 .contactus:hover {
     border-color: #ff1414;
+}
+
+.contact-form {
+    position: relative;
+    z-index: 3;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: #111;
+}
+
+.contact-form:hover {
+    border-color: #ff0000;
+    transition: border-color 0.5s ease;
+}
+
+.contact-form button.btn {
+    background-color: #ff1414;
+    color: #fff;
+}
+
+.contact-form button.btn:hover {
+    background: #8b0000;
+    border: 1px solid #ff1414;
+    color: #999999;
+}
+
+.contact-form button.btn:active {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
 }

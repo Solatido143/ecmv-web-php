@@ -6,7 +6,7 @@ include_once('includes/navbar.php');
     <div class="gallery-wrapper py-3">
         <div class="content-gallery">
             <div class="text-center">
-                <h1 class="services-title"><u>Our Services</u></h1>
+                <h1 class="services-title">Our Services</h1>
             </div>
             <div class="gallery full">
                 <div class="swiper-container">
@@ -162,7 +162,7 @@ include_once('includes/navbar.php');
     <div class="container py-3">
         <div class="card text-center">
             <div class="card-header">
-                <h2 class="card-title h-5">WE PROVIDE NATIONWIDE ENGINEERS</h2>
+                <h1 class="card-title h2">WE PROVIDE NATIONWIDE ENGINEERS</h1>
             </div>
             <div class="card-body d-sm-none p-0">
                 <img src="image/ph-map.png" alt="ph-Map" class="img"></img>

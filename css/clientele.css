@@ -2,13 +2,9 @@
   display: none;
 }
 
-/* linya below ng text burahin kung panget */
-div[style="text-align: center;"] h1 {
+h1 {
   border-bottom: 2px solid red;
-  padding-bottom: 10px;
-  /* Adjust as needed */
   display: inline-block;
-  /* Ensure the border only takes the width of the text */
 }
 
 .owl-carousel:hover .owl-buttons {

@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       product.style.display = "block";
     });
 
-    if (document.querySelector(".pagination")) {
+    if (document.querySelector(".custom-pagination")) {
       updatePagination(productsArray, pageNum, pageSize);
     }
 
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updatePagination(productsArray, pageNum, pageSize) {
     const totalPages = Math.ceil(productsArray.length / pageSize);
-    const pagination = document.querySelector(".pagination");
+    const pagination = document.querySelector(".custom-pagination");
     pagination.textContent = "";
 
     for (let i = 0; i < totalPages; i++) {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
           if (previewContainer) {
             previewContainer.style.display = "flex";
-            document.documentElement.style.setProperty('--overflow-y', 'hidden');
+            // document.documentElement.style.setProperty('--overflow-y', 'hidden');
             let name = product.getAttribute("data-name");
             previewBox.forEach((preview) => {
               let target = preview.getAttribute("data-target");

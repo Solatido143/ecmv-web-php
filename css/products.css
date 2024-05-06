@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
-.pagination button.active {
+.custom-pagination button.active {
    background-color: red;
    color: white;
 }
@@ -215,13 +215,13 @@ input[type="radio"]:checked+label[for^="tab-"] {
    color: #fff;
 }
 
-.pagination {
+.custom-pagination {
    display: flex;
    justify-content: center;
    margin-top: 20px;
 }
 
-.pagination button {
+.custom-pagination button {
    padding: 10px 20px;
    margin: 0 5px;
    background-color: white;
@@ -231,13 +231,13 @@ input[type="radio"]:checked+label[for^="tab-"] {
    border-radius: 5px;
 }
 
-.pagination button:not(.active):hover {
+.custom-pagination button:not(.active):hover {
    background-color: #e0e0e0;
    color: #000000;
 }
 
 @media (max-width: 768px) {
-   .pagination button {
+   .custom-pagination button {
       font-size: 14px;
       padding: 8px 16px;
    }
