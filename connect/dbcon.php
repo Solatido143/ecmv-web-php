@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root"; // default username for MySQL in XAMPP
-$password = ""; // default password is empty in XAMPP
+$username = "root";
+$password = "";
 $database = "ecmvph_web";
 
 // Create connection

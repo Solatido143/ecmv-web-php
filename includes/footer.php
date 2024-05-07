@@ -82,6 +82,8 @@
 <script src="js/serv.js"></script>
 <script src="js/mailer.js"></script>
 <script src="js/navbar.js"></script>
+<script src="js/careers.js"></script>
+
 </body>
 
 </html>

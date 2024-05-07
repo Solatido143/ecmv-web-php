@@ -101,8 +101,7 @@
     color: white;
 }
 
-.modal-apply .modal-body,
-.modal-apply .modal-footer {
+.modal-apply .modal-body {
     background-color: #202020;
 }
 
@@ -112,14 +111,35 @@
     font-size: small;
 }
 
-.modal-apply .modal .modal-footer button.btn{
+.modal-apply .modal button.btn{
     background-color: #ff1414;
 }
-.modal-apply .modal .modal-footer button.btn:hover{
+.modal-apply .modal button.btn:hover{
     background-color: #8b0000;
     border-color: #ff1414;
 }
-.modal-apply .modal .modal-footer button.btn:active{
+.modal-apply .modal button.btn:active{
     background-color: #000;
     border-color: #fff;
+}
+
+.pagination .page-link {
+    color: #000;
+
+}
+
+/* JOBS CONTAINER  */
+
+.col-lg-4 .container .card {
+    transition: transform 0.3s, filter 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.col-lg-4 .container .card:hover {
+    border-color: #ff2424;
+    filter: brightness(50%);
+}
+
+.cardJobs {
+    border: 1px solid #ff1414;
 }
