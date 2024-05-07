@@ -12,7 +12,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
     queryParams.append('email', email);
     queryParams.append('message', message);
 
-    const url = `http://192.168.1.28:8080/test-landia/web/api/contact-us?${queryParams.toString()}`;
+    const url = `https://aep.e-cmv.ph/api/contact-us?${queryParams.toString()}`;
 
     fetch(url, {
         method: 'GET',
