@@ -86,7 +86,9 @@
     background-color: #000;
 }
 
-.job-offers .card .card-header {
+.job-offers .card .card-header,
+.modal-apply .modal .modal-header,
+.modal-smscreen .modal .modal-header {
     background-image: url("../image/header-background.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,10 +96,6 @@
 }
 
 .modal-apply .modal .modal-header {
-    background-image: url("../image/header-background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     color: white;
 }
 
@@ -140,6 +138,10 @@
     filter: brightness(50%);
 }
 
-.cardJobs {
+.cardJobs{
     border: 1px solid #ff1414;
+}
+
+.modal-smscreen .modal-body {
+    color: #000;
 }

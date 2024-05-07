@@ -77,8 +77,8 @@ if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             $cardId = $row['id'];
                     ?>
-                            <div class="card-link" onclick="viewJob('<?php echo $cardId; ?>')">
-                                <div class="card mb-3 <?php echo isset($_GET['job']) && $cardId === $_GET['job'] ? 'cardJobs' : ''; ?>">
+                            <div class="card-link" onclick="viewJob('<?php echo $cardId; ?>')" data-job-id="<?php echo $cardId; ?>" data-bs-toggle="modal" data-bs-target="#smScreenModal">
+                                <div class="card mb-3">
                                     <div class="card-header">
                                         <span class="h4 m-0 fw-bold"><?php echo $row['job_title']; ?></span>
                                     </div>
@@ -170,7 +170,6 @@ if ($result->num_rows > 0) {
         </div>
     </div>
 </div>
-
 <div class="modal-apply">
     <div class="modal fade modal-sm" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -206,54 +205,71 @@ if ($result->num_rows > 0) {
         </div>
     </div>
 </div>
+<div class="modal-smscreen">
+    <div class="modal" id="smScreenModal" tabindex="-1" aria-labelledby="smScreenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+            <div class="modal-content" id="modalContentSmScreen">
+                <div class="modal-header">
+                    <span class="modal-title fs-5" id="smScreenModalLabel">Modal</span>
+                </div>
+                <div class="modal-body">
+                    <h5>JOB DESCRIPTION</h5>
+                    <ul>
+                        <li></li>
+                    </ul>
+                    <hr>
+                    <h5>REQUIREMENTS</h5>
+                    <ul>
+                        <li></li>
+                    </ul>
+                    <hr>
+                    <h5>REQUIRED SKILLS</h5>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#applyModal" data-custom-value="<?= $job['id'] ?>">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- why join us -->
-<div class="container-svg">
-    <svg viewBox="0 0 1320 300">
-        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-            Why Join Us?
-        </text>
-    </svg>
-</div>
-<div class="container-join">
-    <div class="row-join">
-        <div class="col-join" id="innovative-env">
+<div class="container py-3">
+    <div class="container-svg">
+        <svg viewBox="0 0 1320 300">
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                Why Join Us?
+            </text>
+        </svg>
+    </div>
+    <div class="row gap-3 gap-md-0">
+        <div class="col-md-6">
             <h2 class="info-join-1"><img src="image/bulb.png" class="icon-join" alt=""> Innovative Environment</h2>
-            <p class="info-join">Join a team that thrives in an innovative environment, where creativity is encouraged,
-                and ideas are valued. Be part of shaping the future of technology solutions.</p>
+            <p class="info-join">Join a team that thrives in an innovative environment, where creativity is encouraged, and ideas are valued. Be part of shaping the future of technology solutions.</p>
         </div>
-        <div class="col-join" id="impactful-work">
+        <div class="col-md-6">
             <h2 class="info-join-1"><img src="image/bulb.png" class="icon-join" alt="">Impactful Work</h2>
-            <p class="info-join">Make a difference by working on projects that have a real impact on our clients and the
-                industry. At ECMV I.T. Corp, your work will contribute to driving technological advancements and shaping
-                the future of I.T.</p>
+            <p class="info-join">Make a difference by working on projects that have a real impact on our clients and the industry. At ECMV I.T. Corp, your work will contribute to driving technological advancements and shaping the future of I.T.</p>
         </div>
-    </div>
-    <div class="row-join">
-        <div class="col-join" id="career-growth">
+        <div class="col-md-6">
             <h2 class="info-join-1"><img src="image/bulb.png" class="icon-join" alt="">Career Growth Opportunities</h2>
-            <p class="info-join">At ECMV 1.T. Corp, we prioritize the growth and development of our employees. From
-                mentorship programs to ongoing training, we provide the resources you need to advance your career.</p>
+            <p class="info-join">At ECMV 1.T. Corp, we prioritize the growth and development of our employees. From mentorship programs to ongoing training, we provide the resources you need to advance your career.</p>
         </div>
-        <div class="col-join" id="benefits-package">
+        <div class="col-md-6">
             <h2 class="info-join-1"><img src="image/bulb.png" class="icon-join" alt="">Competitive Benefits Package</h2>
-            <p class="info-join">Enjoy a competitive benefits package that includes comprehensive health coverage,
-                retirement plans, and other perks. We believe in taking care of our employees so they can focus on their
-                work and personal growth.</p>
+            <p class="info-join">Enjoy a competitive benefits package that includes comprehensive health coverage retirement plans, and other perks. We believe in taking care of our employees so they can focus on their work and personal growth.</p>
         </div>
-    </div>
-    <div class="row-join">
-        <div class="col-join" id="collaborative-culture">
+        <div class="col-md-6">
             <h2 class="info-join-1"><img src="image/bulb.png" class="icon-join" alt="">Collaborative Culture</h2>
-            <p class="info-join">Experience the power of collaboration in a supportive and inclusive work culture. Join
-                a team that values teamwork and fosters an environment where everyone's contributions are recognized and
-                appreciated.</p>
+            <p class="info-join">Experience the power of collaboration in a supportive and inclusive work culture. Join a team that values teamwork and fosters an environment where everyone's contributions are recognized and appreciated.</p>
         </div>
-        <div class="col-join" id="work-life-balance">
+        <div class="col-md-6">
             <h2 class="info-join-1"><img src="image/bulb.png" class="icon-join" alt="">Work-Life Balance</h2>
-            <p class="info-join">We understand the importance of maintaining a healthy work-life balance. Join us and
-                enjoy flexible work hours, remote work options, and a supportive environment that prioritizes your
-                well-being.</p>
+            <p class="info-join">We understand the importance of maintaining a healthy work-life balance. Join us and enjoy flexible work hours, remote work options, and a supportive environment that prioritizes your well-being.</p>
         </div>
     </div>
 </div>
