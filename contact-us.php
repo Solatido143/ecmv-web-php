@@ -12,7 +12,7 @@ include_once('includes/navbar.php');
     <div class="container2">
         <div class="contactus">
             <div class="content-contact-us-container">
-                <form class="contact-form">
+                <form class="contact-form" id="mailer">
                     <h4 class="my-3">Contact Us</h4>
                     <div class="email mb-3">
                         <div class="text">Email <span style="color: red;">*</span></div>

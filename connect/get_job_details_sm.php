@@ -10,17 +10,9 @@ if (isset($_GET['jobId']) && is_numeric($_GET['jobId'])) {
 
     if ($jobResult && $jobResult->num_rows > 0) {
         $job = $jobResult->fetch_assoc();
-
-        // Fetch job descriptions
         $descriptions = fetchDetails($conn, 'job_description', $jobId);
-
-        // Fetch job requirements
         $requirements = fetchDetails($conn, 'job_requirements', $jobId);
-
-        // Fetch job required skills
         $skills = fetchDetails($conn, 'job_required_skills', $jobId);
-
-        // Generate HTML for modal content
         $html = '
         <div class="modal-header">
             <span class="modal-title fs-5" id="smScreenModalLabel">' . $job['job_title'] . '</span>

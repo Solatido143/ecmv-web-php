@@ -27,7 +27,6 @@ function viewJob(jobId) {
         }
     });
 }
-
 function smModalScreen(x) {
     var cardLinks = document.querySelectorAll('.card-link');
     if (x.matches) { // If media query matches
@@ -42,10 +41,38 @@ function smModalScreen(x) {
         });
     }
 }
-
 var x = window.matchMedia("(min-width: 700px)");
 smModalScreen(x);
-
 x.addEventListener("change", function () {
     smModalScreen(x);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('search_job_form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        let formData = new FormData(this);
+        formData.append('isSmallScreen', window.innerWidth < 992);
+        fetch('connect/search_jobs.php', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('job-listings').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
+    function toggleModalAttributes() {
+        var jobLink = document.getElementById('viewjoblink');
+        if (window.innerWidth < 992) {
+            jobLink.setAttribute('data-bs-toggle', 'modal');
+            jobLink.setAttribute('data-bs-target', '#smScreenModal');
+        } else {
+            jobLink.removeAttribute('data-bs-toggle');
+            jobLink.removeAttribute('data-bs-target');
+        }
+    }
+    toggleModalAttributes();
+    window.addEventListener('resize', toggleModalAttributes);
 });

@@ -43,7 +43,7 @@
         <div class="right box">
             <h2>Contact us</h2>
             <div class="content">
-                <form>
+                <form id="mailer">
                     <div class="email">
                         <div class="text">Email <span style="color: red;">*</span></div>
                         <input type="email" name="email" id="email" required>

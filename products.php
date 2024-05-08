@@ -3,7 +3,7 @@ include_once('includes/header.php');
 include_once('includes/navbar.php');
 ?>
 <div class="container1">
-    <h3 class="title mb-3"><u>PRODUCTS</u></h3>
+    <h1 class="title mb-3">PRODUCTS</h1>
     <div class="tab-container mb-3">
         <input type="radio" id="tab-all" name="product-tab" checked>
         <label for="tab-all">All Products</label>

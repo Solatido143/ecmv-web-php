@@ -9,7 +9,7 @@ $status_query = "SELECT * FROM employment_status";
 $result = $conn->query($status_query);
 
 if ($result->num_rows > 0) {
-    $searchSelectOptions .= '<select class="form-select" id="autoSizingSelect">';
+    $searchSelectOptions .= '<select class="form-select" id="jobStatus" name="job-status">';
     $searchSelectOptions .= '<option selected>-- Select</option>';
     while ($row = $result->fetch_assoc()) {
         $searchSelectOptions .= '<option value="' . $row['id'] . '">' . $row['status'] . '</option>';
@@ -20,6 +20,7 @@ if ($result->num_rows > 0) {
 }
 ?>
 
+<!-- Header -->
 <div class="join-team py-3">
     <div class="container">
         <div class="card border rounded-3">
@@ -36,10 +37,10 @@ if ($result->num_rows > 0) {
     <div class="container-fluid p-0">
         <div class="search-container-form h-100">
             <div class="container h-100 d-flex align-items-center position-relative">
-                <form id="search_job_form" class="row gy-2 gx-3 align-items-end" action="#">
+                <form id="search_job_form" class="row gy-2 gx-3 align-items-end" action="#" method="POST">
                     <div class="col-auto">
                         <label class="form-label" for="autoSizingInput">WHAT</label>
-                        <input type="text" class="form-control" id="autoSizingInput" placeholder="Programmer">
+                        <input type="text" name="jobname" class="form-control" id="autoSizingInput" placeholder="Programmer">
                     </div>
                     <div class="col-auto">
                         <label class="form-label" for="autoSizingInputGroup">WHERE</label>
@@ -48,11 +49,10 @@ if ($result->num_rows > 0) {
                         </div>
                     </div>
                     <div class="col-auto">
-                        <label class="visually-hidden" for="autoSizingSelect">Preference</label>
                         <?= $searchSelectOptions ?>
                     </div>
                     <div class="col-auto">
-                        <button type="submit" class="btn text-light rounded-3"><i class="fa fa-magnifying-glass"></i>&nbsp;Find</button>
+                        <button type="submit" id="findButton" class="btn text-light rounded-3"><i class="fa fa-magnifying-glass"></i>&nbsp;Find</button>
                     </div>
                 </form>
             </div>
@@ -65,7 +65,7 @@ if ($result->num_rows > 0) {
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="container overflow-y-auto" style="height:100vh">
+                <div class="container overflow-y-auto" style="height:100vh" id="job-listings">
                     <?php
                     $maxCards = 5;
                     $query = "SELECT jobs.*, employment_status.status AS job_type
@@ -77,7 +77,7 @@ if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             $cardId = $row['id'];
                     ?>
-                            <div class="card-link" onclick="viewJob('<?php echo $cardId; ?>')" data-job-id="<?php echo $cardId; ?>" data-bs-toggle="modal" data-bs-target="#smScreenModal">
+                            <div class="card-link" id="viewjoblink" onclick="viewJob('<?php echo $cardId; ?>')" data-job-id="<?php echo $cardId; ?>" data-bs-toggle="modal" data-bs-target="#smScreenModal">
                                 <div class="card mb-3">
                                     <div class="card-header">
                                         <span class="h4 m-0 fw-bold"><?php echo $row['job_title']; ?></span>
@@ -170,6 +170,8 @@ if ($result->num_rows > 0) {
         </div>
     </div>
 </div>
+
+<!-- MODALS -->
 <div class="modal-apply">
     <div class="modal fade modal-sm" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -184,19 +186,19 @@ if ($result->num_rows > 0) {
                     <form action="#" method="post">
                         <div class="mb-3">
                             <label for="username" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="fullname" name="fullname">
+                            <input type="text" class="form-control" id="fullname" name="fullname" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email">
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="cv" class="form-label">CV/Resume</label>
-                            <input type="file" class="form-control" id="cv" name="cv">
+                            <input type="file" class="form-control" id="cv" name="cv" required>
                         </div>
                         <div class="mb-3">
                             <label for="pitch" class="form-label">Pitch</label>
-                            <textarea class="form-control" id="pitch" name="pitch" rows="3"></textarea>
+                            <textarea class="form-control" id="pitch" name="pitch" rows="3" required></textarea>
                         </div>
                         <button type="submit" class="btn text-light rounded-3 float-end">Apply Now</button>
                     </form>

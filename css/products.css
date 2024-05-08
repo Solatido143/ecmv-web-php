@@ -37,7 +37,6 @@ input[type="radio"]:checked+label[for^="tab-"] {
 }
 
 .container1 .title {
-   font-size: 24px;
    color: white;
    margin-bottom: 3rem;
    text-transform: uppercase;
