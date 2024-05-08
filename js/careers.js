@@ -76,3 +76,22 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleModalAttributes();
     window.addEventListener('resize', toggleModalAttributes);
 });
+
+
+
+//para sa btn animation lang
+document.getElementById('applicationForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+    
+    // Change button to loading state
+    document.getElementById('applyButton').innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    
+    // Simulate delay for loading animation
+    setTimeout(function () {
+        // Restore the original button content
+        document.getElementById('applyButton').innerHTML = '<i class="fas fa-check"></i>';
+        
+        // Submit the form
+        document.getElementById('applicationForm').submit();
+    }, 3000); // Adjust the delay time (milliseconds) as needed
+});

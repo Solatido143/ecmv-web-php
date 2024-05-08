@@ -145,3 +145,22 @@
 .modal-smscreen .modal-body {
     color: #000;
 }
+
+
+
+/* new modal css */
+.btn{
+    color: white;
+}
+/* Custom CSS for button and loading animation */
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: width 0.3s;
+}
+
+/* Custom CSS for modal hover effect */
+.modal-content:hover {
+    border-color: #ff2424;
+}

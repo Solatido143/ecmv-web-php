@@ -171,7 +171,7 @@ if ($result->num_rows > 0) {
     </div>
 </div>
 
-<!-- MODALS -->
+<!-- Modal -->
 <div class="modal-apply">
     <div class="modal fade modal-sm" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -180,33 +180,35 @@ if ($result->num_rows > 0) {
                     <div>
                         <img src="image/logo.png" alt="E-CMV Logo" width="175" height="50">
                     </div>
-                    <button type="button" class="btn-close" style="background-color: red" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="post">
+                    <form id="applicationForm" action="#" method="post">
                         <div class="mb-3">
                             <label for="username" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="fullname" name="fullname" required>
+                            <input type="text" class="form-control" id="fullname" name="fullname">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <input type="email" class="form-control" id="email" name="email">
                         </div>
                         <div class="mb-3">
                             <label for="cv" class="form-label">CV/Resume</label>
-                            <input type="file" class="form-control" id="cv" name="cv" required>
+                            <input type="file" class="form-control" id="cv" name="cv">
                         </div>
                         <div class="mb-3">
                             <label for="pitch" class="form-label">Pitch</label>
-                            <textarea class="form-control" id="pitch" name="pitch" rows="3" required></textarea>
+                            <textarea class="form-control" id="pitch" name="pitch" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn text-light rounded-3 float-end">Apply Now</button>
+                        <button type="submit" id="applyButton" class="btn float-end">Apply Now</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 <div class="modal-smscreen">
     <div class="modal" id="smScreenModal" tabindex="-1" aria-labelledby="smScreenModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
@@ -275,7 +277,7 @@ if ($result->num_rows > 0) {
         </div>
     </div>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <?php
 include_once('includes/footer.php');
 ?>

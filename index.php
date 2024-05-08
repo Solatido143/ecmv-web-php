@@ -122,6 +122,7 @@ include_once('includes/navbar.php');
             <div class="client"><img src="image/image-clientele/bakeryschool.png" alt="bakeryschool" style="background-color: white;"></div>
             <div class="client"><img src="image/image-clientele/dpwh.png" alt="dpwh"></div>
             <div class="client"><img src="image/image-clientele/486-CREATION-ENTERPRICES.png" alt="486-CREATION-ENTERPRICES"></div>
+            <div class="client"><img src="image/image-clientele/euronet.png" alt="euronet"></div>
         </div>
     </div>
 </div>

@@ -30,12 +30,6 @@ include_once('includes/navbar.php');
         </div>
     </div>
 </div>
-<div class="bottom">
-    <div class="d-flex justify-content-center footer-bottom align-items-center">
-        <span class="credit">Copyright <a href="#">E-CMV I.T Corp.</a>&nbsp;|&nbsp;</span>
-        <span class="far fa-copyright"></span><span> 2024</span>
-    </div>
-</div>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="contactusparticles.js"></script>
 <script src="js/mailer.js"></script>
